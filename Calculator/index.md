@@ -1,13 +1,13 @@
 # 📘 Documentación del Proyecto Calculator
 
-Bienvenido a la documentación del proyecto **Calculator**. Aquí encontrarás información técnica sobre las clases, métodos y pruebas disponibles en este proyecto.
+¡Bienvenido! Esta es la documentación técnica del proyecto **Calculator**, donde encontrarás detalles sobre la arquitectura, las clases principales, los métodos implementados y las pruebas de comportamiento (BDD).
 
-## 🔗 Recursos principales
+## 📂 Secciones disponibles
 
-- 📐 [API - Calculator](api/Calculator.Domain.html)
-- 📐 [API - Calculator](api/Calculator.Domain.Calculator.html)
-- 📐 [API - Calculator](bdd-report/index.html)
+- 🧩 [Documentación de la biblioteca principal (`Calculator.Domain`)](api/Calculator.Domain.html): Explicación de las clases y componentes del dominio.
+- ➕ [Detalles de la clase `Calculator`](api/Calculator.Domain.Calculator.html): Información específica sobre la clase central del proyecto.
+- ✅ [Reporte BDD (Behavior Driven Development)](bdd-report/index.html): Escenarios de prueba ejecutados y resultados.
 
 ---
 
-> Generado automáticamente con [DocFX](https://dotnet.github.io/docfx/).
+> 🛠️ Esta documentación fue generada automáticamente con [DocFX](https://dotnet.github.io/docfx/).
