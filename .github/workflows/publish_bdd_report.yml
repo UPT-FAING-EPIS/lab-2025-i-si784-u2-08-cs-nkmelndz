@@ -28,7 +28,7 @@ jobs:
 
     - name: Run tests and generate BDD report
       working-directory: Calculator
-      run: dotnet test --no-build --logger "trx;LogFileName=test-results.trx"
+      run: dotnet test --collect:"XPlat Code Coverage"
 
     - name: Install SpecFlow.Plus.LivingDoc CLI
       working-directory: Calculator
