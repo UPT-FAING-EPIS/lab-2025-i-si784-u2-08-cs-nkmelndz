@@ -1,0 +1,22 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "Calculator.Domain/Calculator.Domain.csproj" ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "**/*.md" ] },
+      { "files": [ "api/**.yml" ] }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "Calculator"
+    }
+  }
+}
