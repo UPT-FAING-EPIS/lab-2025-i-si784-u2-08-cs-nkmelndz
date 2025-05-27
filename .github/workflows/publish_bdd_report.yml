@@ -38,12 +38,12 @@ jobs:
       working-directory: Calculator
       run: |
         export PATH="$PATH:~/.dotnet/tools"
-        livingdoc test-assembly ./Calculator.Domain.Tests/bin/Debug/net6.0/Calculator.Domain.Tests.dll -t ./Calculator.Domain.Tests/bin/Debug/net6.0/TestExecution.json  -o bdd-report
+        livingdoc test-assembly ./Calculator.Domain.Tests/bin/Debug/net6.0/Calculator.Domain.Tests.dll -t ./Calculator.Domain.Tests/bin/Debug/net6.0/TestExecution.json  -o bdd-report/index.html
 
     - name: Deploy report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./Calculator/bdd-report
-        publish_branch: gh-pages
+        publish_branch: gh-pages/bdd-report
         keep_files: true
