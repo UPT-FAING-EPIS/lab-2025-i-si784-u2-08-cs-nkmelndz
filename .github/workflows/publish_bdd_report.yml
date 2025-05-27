@@ -45,5 +45,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./Calculator/bdd-report
-        publish_branch: gh-pages/bdd-report
+        publish_branch: gh-pages
+        destination_dir: bdd-report
         keep_files: true
