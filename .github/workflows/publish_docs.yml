@@ -15,7 +15,7 @@ jobs:
       - name: Instalar .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "6.0.x" # O la versión que uses
+          dotnet-version: "8.0.x" # O la versión que uses
 
       - name: Init DocFx
         run: dotnet tool update -g docfx
@@ -30,4 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: Calculator/_site
