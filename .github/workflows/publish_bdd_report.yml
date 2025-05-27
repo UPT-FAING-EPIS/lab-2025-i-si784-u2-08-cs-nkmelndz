@@ -38,7 +38,7 @@ jobs:
       working-directory: Calculator
       run: |
         export PATH="$PATH:~/.dotnet/tools"
-        livingdoc test-assembly ./Calculator.Domain.Tests/bin/Debug/net6.0/Calculator.Domain.Tests.dlll -t ./Calculator.Domain.Tests/bin/Debug/net6.0/TestExecution.json  -o bdd-report
+        livingdoc test-assembly ./Calculator.Domain.Tests/bin/Debug/net6.0/Calculator.Domain.Tests.dll -t ./Calculator.Domain.Tests/bin/Debug/net6.0/TestExecution.json  -o bdd-report
 
     - name: Deploy report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
