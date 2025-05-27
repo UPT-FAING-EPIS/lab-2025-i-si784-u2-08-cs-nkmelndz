@@ -6,6 +6,7 @@ Bienvenido a la documentación del proyecto **Calculator**. Aquí encontrarás i
 
 - 📐 [API - Calculator](api/Calculator.Domain.html)
 - 📐 [API - Calculator](api/Calculator.Domain.Calculator.html)
+- 📐 [API - Calculator](bdd-report/index.html)
 
 ---
 
