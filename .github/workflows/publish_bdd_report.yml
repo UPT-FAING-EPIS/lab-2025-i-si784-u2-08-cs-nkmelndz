@@ -19,18 +19,23 @@ jobs:
         dotnet-version: '6.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      working-directory: Calculator
+      run: dotnet restore 
 
     - name: Build project
+      working-directory: Calculator
       run: dotnet build --no-restore --configuration Release
 
     - name: Run tests and generate BDD report
+      working-directory: Calculator
       run: dotnet test --no-build --logger "trx;LogFileName=test-results.trx"
 
     - name: Install SpecFlow.Plus.LivingDoc CLI
+      working-directory: Calculator
       run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
 
     - name: Generate LivingDoc report
+      working-directory: Calculator
       run: |
         export PATH="$PATH:~/.dotnet/tools"
         livingdoc test-assembly ./Calculator.Domain.Tests/bin/Debug/net6.0/Calculator.Domain.Tests.dlll -t ./Calculator.Domain.Tests/bin/Debug/net6.0/TestExecution.json  -o bdd-report
@@ -39,6 +44,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./bdd-report
+        publish_dir: ./Calculator/bdd-report
         publish_branch: gh-pages
         keep_files: true
