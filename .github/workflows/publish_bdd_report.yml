@@ -48,3 +48,4 @@ jobs:
         publish_branch: gh-pages
         destination_dir: bdd-report
         keep_files: true
+        force: true 
